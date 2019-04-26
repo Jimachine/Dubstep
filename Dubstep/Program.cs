@@ -10,7 +10,7 @@ namespace Dubstep
     {
         static void Main(string[] args)
         {
-            Dubstep.SongDecoder("WUBWUBIAMWUBX");
+            Dubstep.SongDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB");
         }
     }
 }
