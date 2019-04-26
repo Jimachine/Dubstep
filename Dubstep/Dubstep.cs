@@ -10,23 +10,29 @@ namespace Dubstep
     {
         public static string SongDecoder(string input)
         {
-            // if index 0 is W, is index 2 U and index 3 B?
-            string decodedString = input;
-            int test = input.Length;
+            
 
-            while (decodedString.Contains("WUB"))
+            //for (int c = 0; c < input.Length; c++)
+            //{
+            //    if (input.Contains("WUB") & input[c] == 'W' & input[c + 1] == 'U' & input[c + 2] == 'B')
+            //    {
+            //        input = input.Remove(c, 3);
+            //        c = -1;
+            //    }
+            //    else if (!input.Contains("WUB"))
+            //    {
+            //        break;
+            //    }
+            //}
+            while (input.Contains("WUB"))
             {
-                for (int c = 0; c < decodedString.Length; c++)
-                {
-                    if (decodedString[c] == 'W' & decodedString[c + 1] == 'U' & decodedString[c + 2] == 'B')
-                    {
-                        decodedString = decodedString.Remove(c, 3);
-                        c = 0;
-                    }
-                }
+                int i = input.IndexOf("WUB");
+                
+                input = input.Remove(i, 3);
             }
-            Console.WriteLine(decodedString);
-            return decodedString;
+
+            Console.WriteLine(input);
+            return input;
         }
     }
 }
