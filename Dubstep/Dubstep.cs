@@ -14,13 +14,16 @@ namespace Dubstep
             {
                 int i = input.IndexOf("WUB");
                 input = input.Remove(i, 3);
-
-                if (i != 0)
-                {
-                    input = input.Insert(i, " ");
-                }
+                input = input.Insert(i, " ");
+                int newI = input.IndexOf("WUB");
             }
+            input = input = input.Trim(' ');
 
+            while (input.Contains("  "))
+            {
+                int i = input.IndexOf("  ");
+                input = input.Remove(i, 1);
+            }
             Console.WriteLine(input);
             return input;
         }
